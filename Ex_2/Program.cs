@@ -31,15 +31,6 @@ int MinLineOfArray (int[,] array)
     
     int[] newArray = new int[array.GetLength(0)];
 
-    if (array.GetLength(0) == 1)
-    {
-        for (var i = 0; i < array.GetLength(1); i++)
-        {
-            newArray [i] = array[0,i];
-        }
-    }
-    else 
-    {
     for (var i = 0; i < array.GetLength(0); i++)
     {
         int sum = 0;    
@@ -49,7 +40,7 @@ int MinLineOfArray (int[,] array)
         }
         newArray [i] = sum;
     }
-    }
+    
 
     int minSum = newArray [0];
     int minIndex = 0;
