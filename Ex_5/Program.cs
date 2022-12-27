@@ -49,6 +49,8 @@ int[,] Create2DArray(int m, int n)
 
 void SpiralArray(int[,] array)
 {
+    if (array.GetLength(0) == array.GetLength(1))
+    {
     int num = 1;
     int var = 0;
     int x = array.GetLength(0);
@@ -82,6 +84,8 @@ void SpiralArray(int[,] array)
         num++;
     }
     }
+    }
+    else Console.WriteLine("Не могу заполнить массив, резмерность должна быть одинаковая!");
 
 }
 
